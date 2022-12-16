@@ -1,5 +1,10 @@
 const routes = require("express").Router();
 const controller = require("../controller/controller");
+
+routes.get("/", (req, res) => {
+  res.send("Hello Expense Tracker Server");
+});
+
 routes
   .route("/api/categories")
   .post(controller.create_Categories)
